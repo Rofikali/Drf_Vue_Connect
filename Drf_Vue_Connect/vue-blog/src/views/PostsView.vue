@@ -28,7 +28,8 @@ onMounted(getAllStudent);
                                 src="{{ author }}">
                             <div class="flex-grow">
                                 <h1 class="text-gray-900 title-font font-medium">
-                                    <RouterLink :to="`posts/${slug}`">{{ title }}</RouterLink>
+                                    <RouterLink :to="{ name: 'postdetail', params: { id: slug } }">{{ title }}
+                                    </RouterLink>
                                 </h1>
                                 <p class="text-gray-500">{{ content }}</p>
                                 <h3 class="text-gray-500">{{ created }}</h3>
